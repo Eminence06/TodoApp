@@ -1,9 +1,14 @@
 package com.todo.TodoApp.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "tasks")
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Builder
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
